@@ -1,8 +1,15 @@
-package com.michalszalkowski.module.car.dto;
+package com.filipmoszczynski.module.car.entity;
 
-public class CarDto {
+import javax.persistence.*;
 
+@Entity
+@Table(name = "car")
+public class CarEntity {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+
 	private String guid;
 	private String make;
 	private String model;
@@ -11,13 +18,16 @@ public class CarDto {
 	private String color;
 	private String company;
 	private String price;
-	private CarDetailsDto details;
+
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "details_id", referencedColumnName = "id")
+	private CarDetailsEntity details;
 
 	public Long getId() {
 		return id;
 	}
 
-	public CarDto setId(Long id) {
+	public CarEntity setId(Long id) {
 		this.id = id;
 		return this;
 	}
@@ -26,7 +36,7 @@ public class CarDto {
 		return guid;
 	}
 
-	public CarDto setGuid(String guid) {
+	public CarEntity setGuid(String guid) {
 		this.guid = guid;
 		return this;
 	}
@@ -35,7 +45,7 @@ public class CarDto {
 		return make;
 	}
 
-	public CarDto setMake(String make) {
+	public CarEntity setMake(String make) {
 		this.make = make;
 		return this;
 	}
@@ -44,7 +54,7 @@ public class CarDto {
 		return model;
 	}
 
-	public CarDto setModel(String model) {
+	public CarEntity setModel(String model) {
 		this.model = model;
 		return this;
 	}
@@ -53,7 +63,7 @@ public class CarDto {
 		return year;
 	}
 
-	public CarDto setYear(Long year) {
+	public CarEntity setYear(Long year) {
 		this.year = year;
 		return this;
 	}
@@ -62,7 +72,7 @@ public class CarDto {
 		return vin;
 	}
 
-	public CarDto setVin(String vin) {
+	public CarEntity setVin(String vin) {
 		this.vin = vin;
 		return this;
 	}
@@ -71,7 +81,7 @@ public class CarDto {
 		return color;
 	}
 
-	public CarDto setColor(String color) {
+	public CarEntity setColor(String color) {
 		this.color = color;
 		return this;
 	}
@@ -80,7 +90,7 @@ public class CarDto {
 		return company;
 	}
 
-	public CarDto setCompany(String company) {
+	public CarEntity setCompany(String company) {
 		this.company = company;
 		return this;
 	}
@@ -89,16 +99,16 @@ public class CarDto {
 		return price;
 	}
 
-	public CarDto setPrice(String price) {
+	public CarEntity setPrice(String price) {
 		this.price = price;
 		return this;
 	}
 
-	public CarDetailsDto getDetails() {
+	public CarDetailsEntity getDetails() {
 		return details;
 	}
 
-	public CarDto setDetails(CarDetailsDto details) {
+	public CarEntity setDetails(CarDetailsEntity details) {
 		this.details = details;
 		return this;
 	}

@@ -1,7 +1,7 @@
-package com.michalszalkowski.module.car.service;
+package com.filipmoszczynski.module.car.service;
 
-import com.michalszalkowski.module.car.repository.CarRepository;
-import com.michalszalkowski.module.car.entity.CarEntity;
+import com.filipmoszczynski.module.car.repository.CarRepository;
+import com.filipmoszczynski.module.car.entity.CarEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

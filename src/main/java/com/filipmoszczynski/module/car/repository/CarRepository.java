@@ -1,6 +1,6 @@
-package com.michalszalkowski.module.car.repository;
+package com.filipmoszczynski.module.car.repository;
 
-import com.michalszalkowski.module.car.entity.CarEntity;
+import com.filipmoszczynski.module.car.entity.CarEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 

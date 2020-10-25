@@ -1,4 +1,4 @@
-package com.michalszalkowski.module.car.dto;
+package com.filipmoszczynski.module.car.dto;
 
 public class CarDetailsDto {
 

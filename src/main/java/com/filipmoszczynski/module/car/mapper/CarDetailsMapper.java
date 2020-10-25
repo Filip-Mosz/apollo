@@ -1,7 +1,7 @@
-package com.michalszalkowski.module.car.mapper;
+package com.filipmoszczynski.module.car.mapper;
 
-import com.michalszalkowski.module.car.dto.CarDetailsDto;
-import com.michalszalkowski.module.car.entity.CarDetailsEntity;
+import com.filipmoszczynski.module.car.dto.CarDetailsDto;
+import com.filipmoszczynski.module.car.entity.CarDetailsEntity;
 
 public class CarDetailsMapper {
 

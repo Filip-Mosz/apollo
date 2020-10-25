@@ -1,7 +1,7 @@
-package com.michalszalkowski.module.car.mapper;
+package com.filipmoszczynski.module.car.mapper;
 
-import com.michalszalkowski.module.car.dto.CarDto;
-import com.michalszalkowski.module.car.entity.CarEntity;
+import com.filipmoszczynski.module.car.dto.CarDto;
+import com.filipmoszczynski.module.car.entity.CarEntity;
 
 import java.util.List;
 import java.util.stream.Collectors;

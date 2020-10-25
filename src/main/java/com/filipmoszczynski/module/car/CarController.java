@@ -1,8 +1,8 @@
-package com.michalszalkowski.module.car;
+package com.filipmoszczynski.module.car;
 
-import com.michalszalkowski.module.car.dto.CarDto;
-import com.michalszalkowski.module.car.mapper.CarMapper;
-import com.michalszalkowski.module.car.service.CarService;
+import com.filipmoszczynski.module.car.dto.CarDto;
+import com.filipmoszczynski.module.car.mapper.CarMapper;
+import com.filipmoszczynski.module.car.service.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

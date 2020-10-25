@@ -1,4 +1,4 @@
-package com.michalszalkowski.module.car.entity;
+package com.filipmoszczynski.module.car.entity;
 
 import javax.persistence.*;
 
