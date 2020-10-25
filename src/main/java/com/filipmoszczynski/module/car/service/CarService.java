@@ -17,7 +17,20 @@ public class CarService {
 		return carRepository.getOneByGuid(guid);
 	}
 
-	public List<CarEntity> getAll() {
+	public List<CarEntity> getAll(String color, String make, Long year) {
+
+		if(color != null) {
+			return carRepository.findAllByColor(color);
+		}
+
+		if(make != null) {
+			return carRepository.findAllByMake(make);
+		}
+
+		if(year != null) {
+			return carRepository.findByYearGreaterThan(year);
+		}
+
 		return carRepository.findAll();
 	}
 
