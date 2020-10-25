@@ -6,6 +6,7 @@ import com.filipmoszczynski.module.car.service.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -22,8 +23,14 @@ public class CarController {
 	}
 
 	@GetMapping("/api/cars")
-	public List<CarDto> getCars() {
-		return CarMapper.map(carService.getAll());
+	public List<CarDto> getCars(
+		@RequestParam(required = false)
+		String color,
+		@RequestParam(required = false)
+		String make,
+		@RequestParam(required = false)
+		Long year) {
+		return CarMapper.map(carService.getAll(color, make, year));
 	}
 
 }
