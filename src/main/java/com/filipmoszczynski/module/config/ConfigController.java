@@ -14,7 +14,7 @@ public class ConfigController {
         this.applicationConfig = applicationConfig;
     }
 
-    private ApplicationConfig applicationConfig;
+    private final ApplicationConfig applicationConfig;
 
     @GetMapping("/config")
     public String getConfig(Model model) {
