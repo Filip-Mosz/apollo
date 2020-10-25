@@ -2,7 +2,6 @@ package com.filipmoszczynski.module.car.dto;
 
 public class CarDto {
 
-	private Long id;
 	private String guid;
 	private String make;
 	private String model;
@@ -12,15 +11,6 @@ public class CarDto {
 	private String company;
 	private String price;
 	private CarDetailsDto details;
-
-	public Long getId() {
-		return id;
-	}
-
-	public CarDto setId(Long id) {
-		this.id = id;
-		return this;
-	}
 
 	public String getGuid() {
 		return guid;

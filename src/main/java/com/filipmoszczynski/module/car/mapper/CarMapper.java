@@ -10,7 +10,6 @@ public class CarMapper {
 
 	public static CarDto map(CarEntity entity) {
 		return new CarDto()
-				.setId(entity.getId())
 				.setGuid(entity.getGuid())
 				.setMake(entity.getMake())
 				.setModel(entity.getModel())
