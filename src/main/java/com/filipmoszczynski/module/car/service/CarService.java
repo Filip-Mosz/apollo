@@ -13,8 +13,8 @@ public class CarService {
 	@Autowired
 	private CarRepository carRepository;
 
-	public CarEntity getOne(Long id) {
-		return carRepository.getOne(id);
+	public CarEntity getOne(String guid) {
+		return carRepository.getOneByGuid(guid);
 	}
 
 	public List<CarEntity> getAll() {

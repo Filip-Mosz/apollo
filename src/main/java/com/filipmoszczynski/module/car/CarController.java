@@ -16,13 +16,13 @@ public class CarController {
 	@Autowired
 	private CarService carService;
 
-	@GetMapping(value = "/api/cars/{id}")
-	public CarDto getBook(@PathVariable Long id) {
-		return CarMapper.map(carService.getOne(id));
+	@GetMapping(value = "/api/cars/{guid}")
+	public CarDto getCar(@PathVariable String guid) {
+		return CarMapper.map(carService.getOne(guid));
 	}
 
 	@GetMapping("/api/cars")
-	public List<CarDto> getBooks() {
+	public List<CarDto> getCars() {
 		return CarMapper.map(carService.getAll());
 	}
 
