@@ -20,11 +20,6 @@ public class CarControllerV2 {
 	@Autowired
 	private CarPagingAndSortingRepository repository;
 
-//	@GetMapping(value = "/api/cars/{guid}")
-//	public CarDto getCar(@PathVariable String guid) {
-//		return CarMapper.map(carService.getOne(guid));
-//	}
-
 	@GetMapping("/api/v2/cars")
 	public List<CarDto> getCars(
 		@RequestParam(value ="page", defaultValue = "0")
