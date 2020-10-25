@@ -1,5 +1,6 @@
 package com.filipmoszczynski.module.car;
 
+import com.filipmoszczynski.core.pagination.ListResponse;
 import com.filipmoszczynski.module.car.dto.CarDto;
 import com.filipmoszczynski.module.car.entity.CarEntity;
 import com.filipmoszczynski.module.car.mapper.CarMapper;
@@ -21,17 +22,23 @@ public class CarControllerV2 {
 	private CarPagingAndSortingRepository repository;
 
 	@GetMapping("/api/v2/cars")
-	public List<CarDto> getCars(
+	public ListResponse getCars(
 		@RequestParam(value ="page", defaultValue = "0")
 		int page,
 		@RequestParam(value ="size",  defaultValue = "10")
 		int size) {
 
-		Pageable pageable = PageRequest.of(page, size);
+		Page<CarEntity> carPage = repository.findAll(PageRequest.of(page, size));
 
-		Page<CarEntity> carPage = repository.findAll(pageable);
+		List<CarDto> carList = CarMapper.map(carPage.getContent());
 
-		return CarMapper.map(carPage.getContent());
+		return new ListResponse(
+				carList,
+				carPage.getTotalPages(),
+				carPage.getTotalElements(),
+				carPage.getSize(),
+				carPage.getNumber()
+		);
 	}
 
 }
