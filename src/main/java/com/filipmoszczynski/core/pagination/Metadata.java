@@ -2,11 +2,11 @@ package com.filipmoszczynski.core.pagination;
 
 public class Metadata {
 
-    public Metadata(int totalPages, long totalElements, int size, int page) {
-        this.totalPages = totalPages;
-        this.totalElements = totalElements;
+    public Metadata( int size, int page, int totalPages, long totalElements) {
         this.size = size;
         this.page = page;
+        this.totalPages = totalPages;
+        this.totalElements = totalElements;
     }
 
     private final int totalPages;

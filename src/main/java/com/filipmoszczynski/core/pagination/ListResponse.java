@@ -12,7 +12,7 @@ public class ListResponse<T> {
                         long totalElements,
                         int size,
                         int page){
-        this.metadata = new Metadata(totalPages,totalElements,size,page);
+        this.metadata = new Metadata(size,page, totalPages,totalElements);
         this.content = content;
     }
 
